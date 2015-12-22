@@ -33,5 +33,12 @@ class DirectorDTO{
     return $this;
   }
 
-}
+  //BDD in french and setters/getters in english, needed to convert variables
+  public function hydrateSQL($res){
+    $this->setId($res['realisateur_id'])
+      	 ->setDirectorName($res['nom_realisateur']);
+    return $this;
+	}
+
+}	
 

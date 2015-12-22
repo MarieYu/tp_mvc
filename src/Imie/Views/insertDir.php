@@ -7,8 +7,10 @@
   <body>
     <main>
       <h1>Saisir un réalisateur</h1>
-      <form action="index.php?ctrl=director&act=insert" method="post">
-        <input type="text" name="directorName" placeholder="prenom nom">
+      <a href="index.php?ctrl=director&act=indexDir">Retour à la liste des réalisateurs</a>
+      <form action="index.php?ctrl=director&act=process" method="post">
+        <input type="hidden" name="id" value="<?= $director->getId() ?>">
+        <input type="text" name="directorName" value="<?= $director->getDirectorName() ?>" placeholder="prenom nom">
         <input type="submit" value="envoyer">
       </form>  
     </main>
