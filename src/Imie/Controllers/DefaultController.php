@@ -10,7 +10,7 @@ class DefaultController extends Controller{
     // Second argument : associative array. key is the name
     // of the variable, value is it's value
     $this->render('index', array(
-      'target' => 'World'
+      'target' => 'réalisateurs'
     ));
   }
 
