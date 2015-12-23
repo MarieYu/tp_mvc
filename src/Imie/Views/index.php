@@ -9,7 +9,7 @@
 	<header>
 		<h1>Réalisateurs et programmes</h1>
 		<a href="index.php?ctrl=director&act=indexDir">Réalisateurs</a>
-		<a href="">Programmes</a>
+		<a href="index.php?ctrl=program&act=indexProg">Programmes</a>
 	</header>
 	
 </body>

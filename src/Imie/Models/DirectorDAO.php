@@ -15,19 +15,19 @@ class DirectorDAO{
 		$stmt->bindValue(1,$dir->getDirectorName());
 		$stmt->execute();
 
-		$dir->setId(intval($this->pdo->lastInsertId()));
+		$dir->setDirectorId(intval($this->pdo->lastInsertId()));
 		return $dir;
 	}
 
 	// update one DirectorDTO in database
   public function update(DirectorDTO $dir){
     // if id = -1, there is nothing to do
-    if (-1 === $dir->getId()) return;
+    if (-1 === $dir->getDirectorId()) return;
 
     $stmt = $this->pdo->prepare("UPDATE realisateur SET nom_realisateur = ? WHERE realisateur_id = ?;");
 
     $stmt->bindValue(1, $dir->getDirectorName());
-    $stmt->bindValue(2, $dir->getId());
+    $stmt->bindValue(2, $dir->getDirectorId());
     $stmt->execute();
   }
 
@@ -74,9 +74,9 @@ class DirectorDAO{
   		$dir = new DirectorDTO();
   		$dir->hydrateSQL($res);
   	}
-  	return $dir;
-  	
+  	return $dir;  	
   }
+
 
 
 

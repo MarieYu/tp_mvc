@@ -17,8 +17,8 @@
             <td><?= $director->getDirectorName() ?></td>
 
             <td>
-              <a href="index.php?ctrl=director&act=delete&id=<?= $director->getId() ?>"><i class="fa fa-trash"></i></a>
-              <a href="index.php?ctrl=director&act=modForm&id=<?= $director->getId() ?>"><i class="fa fa-pencil"></i></a>
+              <a href="index.php?ctrl=director&act=delete&id=<?= $director->getDirectorId() ?>"><i class="fa fa-trash"></i></a>
+              <a href="index.php?ctrl=director&act=modForm&id=<?= $director->getDirectorId() ?>"><i class="fa fa-pencil"></i></a>
             </td>
 
           </tr>

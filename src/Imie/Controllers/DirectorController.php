@@ -65,7 +65,7 @@ class DirectorController extends Controller{
         $dao->update($dto);
       }
     }
-    header('Location: index.php?ctrl=director&act=index');
+    header('Location: index.php?ctrl=director&act=indexDir');
   }
 
 
@@ -94,22 +94,6 @@ class DirectorController extends Controller{
     }
     header('Location: index.php?ctrl=director&act=index');
   }
-
-  //Update function on director
-  // public function updateAction(){
-  //   if(isset($_POST['id'],$_POST['directorName'])){
-  //     $_POST['directorName'] = strip_tags($_POST['directorName']);
-  //     $_POST['id'] = strip_tags($_POST['id']);
-
-  //     $dto = new DirectorDTO();
-  //     $dao = new DirectorDAO();
-
-  //     $dto->hydrateSQL($_POST);
-  //     $dao->update($dto);
-  //   }
-  //   header('Location:index.php?ctrl=director&act=insertDir');
-  // }
-
 
 
 }

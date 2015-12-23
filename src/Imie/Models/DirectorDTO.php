@@ -2,15 +2,15 @@
 namespace Imie\Models;
 
 class DirectorDTO{
-	private $id = -1;
+	private $directorId = -1;
 	private $directorName;
 
-	public function getId(){
-		return $this->id;
+	public function getDirectorId(){
+		return $this->directorId;
 	}
 
-	public function setId($id){
-		$this->id=$id;
+	public function setDirectorId($directorId){
+		$this->directorId=$directorId;
 		return $this;
 	}
 
@@ -35,7 +35,7 @@ class DirectorDTO{
 
   //BDD in french and setters/getters in english, needed to convert variables
   public function hydrateSQL($res){
-    $this->setId($res['realisateur_id'])
+    $this->setDirectorId($res['realisateur_id'])
       	 ->setDirectorName($res['nom_realisateur']);
     return $this;
 	}
